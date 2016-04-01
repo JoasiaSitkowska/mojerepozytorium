@@ -33,14 +33,14 @@ public class Mail {
         gmail.click();
 
         WebElement poleEmail = driver.findElement(By.cssSelector("input[id='Email']"));
-        poleEmail.sendKeys("joasia.sitkowska");
+        poleEmail.sendKeys("login"); //podaj login
 
 
         WebElement dalejbutn = driver.findElement(By.cssSelector("input[id='next']"));
         dalejbutn.click();
 
         WebElement polePassword = driver.findElement(By.cssSelector("input[id='Passwd']"));
-        polePassword.sendKeys("");
+        polePassword.sendKeys("haslo"); //podaj haslo
 
         WebElement logbutn = driver.findElement(By.cssSelector("input[id='signIn']"));
         logbutn.click();
@@ -49,7 +49,7 @@ public class Mail {
         utworzbutn.click();
 
         WebElement poleDo = driver.findElement(By.cssSelector("div[class='wO nr l1'] textarea[id=':nf']"));
-        poleDo.sendKeys("wiktor.kapanowski@gmail.com");
+        poleDo.sendKeys("mail@gmail.com"); // podaj adres email
 
         WebElement temat = driver.findElement(By.cssSelector("input[id=':mz']"));
         temat.sendKeys("test");
@@ -66,7 +66,7 @@ public class Mail {
 
         //Thread.sleep(15000);
 
-        StringSelection ss = new StringSelection("E:\\naszezdjcia\\Turcja2015\\P1110317.jpg");
+        StringSelection ss = new StringSelection("C:\\Users\\Public\\Pictures\\Sample Pictures.Koala.jpg");
 
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
         Robot robot = new Robot();
